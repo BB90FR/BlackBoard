@@ -6,7 +6,7 @@ const options = {
  useUnifiedTopology : true,
 }
 
-mongoose.connect('mongodb+srv://lacapsule:EXIrgUdaFEllfNSH@cluster0-9xbpy.mongodb.net/blackboard?retryWrites=true&w=majority',
+mongoose.connect(`mongodb+srv://${process.env.LOGIN}:${process.env.PASSWORD}@${process.env.CLUSTER}?retryWrites=true&w=majority`,
  options,    
  function(err) {
   if(err == null) {
